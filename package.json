@@ -11,9 +11,5 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "express": "^4.13.3"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-serve": "^0.1.6"
   }
 }
