@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/base.css"/>
-    <link rel="stylesheet" href="styles/style.css"/>
-    <link rel="stylesheet" href="styles/icons.css"/>
-    <link rel="stylesheet" href="vendor/styles/normalize.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
-          crossorigin="anonymous">
-    <script src="vendor/scripts/jquery-2.2.0.min.js"></script>
-    <script src="scripts/util.js"></script>
-    <script src="scripts/blog.js"></script>
-    <script src="scripts/blogArticles.js"></script>
-    <script src="scripts/article.js"></script>
-    <script src="scripts/articleView.js"></script>
-    <script src="scripts/index.js"></script>
+  <title>Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/base.css"/>
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/icons.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script src="vendor/scripts/jquery-2.2.0.min.js"></script>
+  <script src="scripts/util.js"></script>
+  <script src="scripts/blog.js"></script>
+  <script src="scripts/blogArticles.js"></script>
+  <script src="scripts/article.js"></script>
+  <script src="scripts/articleView.js"></script>
+  <script src="scripts/index.js"></script>
+
+  <script id="article-template" type="text/x-handlebars-template">
+    <div class="blog-post clearfix template" data-author="{{authorStub}}" data-category="{{categoryStub}}">
+      <h2 class="blog-post-title">{{title}}</h2>
+      <p class="blog-post-meta">By <a href="{{authorUrl}}" class=author-url>{{author}}</a> published on <span class="article-date">{{publishedOn}}</span>. Category: {{category}}</p>
+      <div class="article-body"> {{{body}}}
+        <a href="#" class="continue btn btn-default">Read on &rarr;</a>
+      </div>
+    </div>
+  </script>
 </head>
 
 <body>
@@ -40,13 +53,7 @@
 
     <div class="row">
       <div class="col-sm-8 blog-main" id="blogPosts">
-        <div class="blog-post clearfix template">
-          <h2 class="blog-post-title">title</h2>
-          <p class="blog-post-meta">By <a href=# class=author-url>author</a> published on <span class="article-date">date</span></p>
-          <div class="article-body"> article body
-            <a href="#" class="read-on btn btn-default">Read on &rarr;</a>
-          </div>
-        </div>
+
       </div>
 
       <div class="col-sm-8 blog-main" id="about">
@@ -75,9 +82,9 @@
           <h4>Elsewhere</h4>
           <ol class="list-unstyled">
             <li><a class="icon-github" target="_blank" href="https://github.com/marythought"> GitHub</a></li>
-            <li><a class="icon-linkedin" target="_blank" href="https://www.linkedin.com/in/mcdickson"
-    > LinkedIn</a></li>
             <li><a class="icon-twitter3" target="_blank" href="https://twitter.com/marythought"> Twitter</a></li>
+            <li><a class="icon-linkedin" target="_blank" href="https://www.linkedin.com/in/mcdickson"
+              > LinkedIn</a></li>
           </ol>
         </div>
       </div><!-- /.blog-sidebar -->
