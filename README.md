@@ -1,12 +1,12 @@
 # TODOs
-- get filters working
 - make navbar Hamburger
 - add non cdn jquery
+- Make sure you aren't showing articles that are unpublished ("draft").
+- Add icons
 
+# Class 1: jQuery and the DOM
 
-# Class 1
-
-Technical Requirements and Grading Rubric
+## Technical Requirements
 
 1. ✅Use good Object Oriented code: Create a blog object, and a constructor function for articles.
 - ✅ Leave as little in the window (global) namespace as possible: attach functions to objects, etc.
@@ -14,7 +14,7 @@ Technical Requirements and Grading Rubric
 - ✅ Your Article prototype should have a .toHtml() function that adds new data to the DOM.
 - ✅Add basic styles: a css reset, content in a single centered column, reasonable margins, etc.
 
-# Class 2
+# Class 2: jQuery and Events
 
 ## User Stories
 
@@ -25,13 +25,11 @@ Technical Requirements and Grading Rubric
 - ✅As the creator, I want the About nav to act as a tab, so my story is revealed FAST.
 - ✅As a reader, I want the blog to use a little color, so that I can distinguish it from other pages.
 
-## Technical Requirements and Grading Rubric
+# Class 3: Mobile-First / Responsive Design and SMACSS
 
-- Use event delegation whenever appropriate.
-- Make sure you aren't showing articles that are unpublished ("draft").
-- Add your filters to the Nav section.
-- Factor out any helper functions to a Util object, perhaps in a util.js file.
-- Do as much work as you can with advanced selectors, rather than littering your markup with classes and ids.
-- When classes and IDs are needed, pick semantic names. There is to be no $('#content .content') nonsense!
-- When one filter is selected, it should reset the other filter (eg: it should not AND them).
-- Add color and icons where appropriate.
+## User Stories
+1. ✅As a visitor, I want the images to be responsive, so that content stays properly proportioned.
+- ✅As a visitor, I want the viewport properly sized, so that content fits all the size I have available.
+- As a visitor, I want the primary nav to be responsive, so that I can get around using any device.
+
+# Class 4: 

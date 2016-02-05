@@ -19,7 +19,11 @@ blog.hideAbout = function() {
 
 blog.showAbout = function() {
   $('#aboutTab').on('click', function() {
+    $('#homeTab').removeClass('active');
+    $('#articlesTab').removeClass('active');
+    $(this).addClass('active');
     $('#blogPosts').hide();
     $('#about').show();
+    $('#article-sort').hide();
   });
 };

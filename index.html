@@ -2,12 +2,16 @@
 <html>
 <head>
     <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/base.css"/>
     <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/icons.css"/>
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
           crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="vendor/scripts/jquery-2.2.0.min.js"></script>
     <script src="scripts/util.js"></script>
     <script src="scripts/blog.js"></script>
     <script src="scripts/blogArticles.js"></script>
@@ -17,24 +21,18 @@
 </head>
 
 <body>
-  <div class="blog-masthead">
-    <div class="container">
-      <nav class="blog-nav">
-        <a id="homeTab" class="blog-nav-item active" href="#">Home</a>
-        <a id="aboutTab" class="blog-nav-item" href="#">About</a>
-        <a id="articlesTab" class="blog-nav-item" href="#">Articles</a>
-        <select id="authorFilter" name="authors">
-          <option value="">Filter by Author</option>
-        </select>
-        <select id="categoryFilter" name="categories">
-          <option value="">Filter by Category</option>
-        </select>
+  <header class="site-header blog-masthead">
+    <div class="container heading-group-h1">
+      <nav class="main-nav blog-nav">
+        <ul>
+          <li id="homeTab" class="tab blog-nav-item active" <a href="#">Home</a></li>
+          <li id="aboutTab" class="tab blog-nav-item" <a href="#">About</a></li>
+        </ul>
       </nav>
     </div>
-  </div>
+  </header>
 
   <div class="container">
-
     <div class="blog-header">
       <h1 class="blog-title">Test Blog for 301</h1>
       <p class="lead blog-description">The teacher becomes the student.</p>
@@ -61,20 +59,25 @@
           <h4>Sidebar</h4>
           <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
         </div>
-        <div class="sidebar-module">
-          <h4>Archives</h4>
-          <ol class="list-unstyled">
-            <li><a href="#">November 2015</a></li>
-            <li><a href="#">October 2015</a></li>
-            <li><a href="#">September 2015</a></li>
-          </ol>
+        <div id="article-sort" class="sidebar-module">
+          <h4>Sort Articles</h4>
+          <section>
+            <select id="authorFilter" name="authors">
+              <option value="">Filter by Author</option>
+            </select>
+            <br>
+            <select id="categoryFilter" name="categories">
+              <option value="">Filter by Category</option>
+            </select>
+          </section>
         </div>
-        <div class="sidebar-module">
+        <div id="social" class="sidebar-module">
           <h4>Elsewhere</h4>
           <ol class="list-unstyled">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li><a class="icon-github" target="_blank" href="https://github.com/marythought"> GitHub</a></li>
+            <li><a class="icon-linkedin" target="_blank" href="https://www.linkedin.com/in/mcdickson"
+    > LinkedIn</a></li>
+            <li><a class="icon-twitter3" target="_blank" href="https://twitter.com/marythought"> Twitter</a></li>
           </ol>
         </div>
       </div><!-- /.blog-sidebar -->
@@ -82,7 +85,7 @@
   </div><!-- /.container -->
 
   <footer class="blog-footer">
-  <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p> Site by Mary Dickson adapted from starter code and lessons from Code Fellows 301: Intermediate Software Development.
   <p>
   <a href="#">Back to top</a>
   </p>

@@ -18,13 +18,13 @@ articleView.truncate = function() {
 };
 
 articleView.showArticles = function(){
-  $('#articlesTab').on('click', function() {
-    blog.hideAbout();
-    articleView.resetArticles();
-  });
   $('#homeTab').on('click', function() {
+    $('#articlesTab').removeClass('active');
+    $('#aboutTab').removeClass('active');
+    $(this).addClass('active');
     $('#about').hide();
     $('#blogPosts').show();
+    $('#article-sort').show();
     articleView.resetArticles();
   });
 };
