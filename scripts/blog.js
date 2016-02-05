@@ -3,14 +3,23 @@ blog.articles = [];
 blog.categories = [];
 blog.authors = [];
 
-blog.render = function(array) {
-  for (var i = 0; i < array.length; i++) {
-    var article = new Article(array[i]);
-    article.toHtml();
-    blog.articles.push(article);
-    articleView.populateFilters(article);
-    articleView.handleFilters();
-  }
+blog.render = function() {
+  blog.processRawData();
+  blog.populate();
+  articleView.populateFilters();
+  articleView.handleFilters();
+};
+
+blog.processRawData = function(){
+  blog.rawData.forEach(function(ele) {
+    blog.articles.push(new Article(ele));
+  });
+};
+
+blog.populate = function(){
+  blog.articles.forEach(function(a){
+    $('#blogPosts').append(a.toHtml());
+  });
 };
 
 blog.hideAbout = function() {
