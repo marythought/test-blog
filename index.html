@@ -12,6 +12,7 @@
     <script src="scripts/blog.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
+    <script src="scripts/articleView.js"></script>
     <script src="scripts/index.js"></script>
 </head>
 
@@ -23,10 +24,10 @@
         <a id="aboutTab" class="blog-nav-item" href="#">About</a>
         <a id="articlesTab" class="blog-nav-item" href="#">Articles</a>
         <select id="authorFilter" name="authors">
-          <option value="#">Filter by Author</option>
+          <option value="">Filter by Author</option>
         </select>
         <select id="categoryFilter" name="categories">
-          <option value="#">Filter by Category</option>
+          <option value="">Filter by Category</option>
         </select>
       </nav>
     </div>
@@ -41,7 +42,7 @@
 
     <div class="row">
       <div class="col-sm-8 blog-main" id="blogPosts">
-        <div class="blog-post" class="clearfix">
+        <div class="blog-post clearfix template">
           <h2 class="blog-post-title">title</h2>
           <p class="blog-post-meta">By <a href=# class=author-url>author</a> published on <span class="article-date">date</span></p>
           <div class="article-body"> article body

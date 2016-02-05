@@ -1,5 +1,5 @@
 var util = {};
 
 util.hypenate = function(string){
-  return string.replace(' ', '-');
+  return string.replace(/ /g, '-');
 };
