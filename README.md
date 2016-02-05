@@ -3,9 +3,9 @@
 - Make sure you aren't showing articles that are unpublished ("draft").
 - Add linkedin icons
 
-# Class 1: jQuery and the DOM
+## User Stories and Goals:
 
-## Technical Requirements
+# Class 1: jQuery and the DOM
 
 1. ✅Use good Object Oriented code: Create a blog object, and a constructor function for articles.
 - ✅ Leave as little in the window (global) namespace as possible: attach functions to objects, etc.
@@ -14,8 +14,6 @@
 - ✅Add basic styles: a css reset, content in a single centered column, reasonable margins, etc.
 
 # Class 2: jQuery and Events
-
-## User Stories
 
 1. ✅ As a reader, I want articles truncated to the first paragraph so that I can easily scroll though the whole list.
 - ✅As a reader, I want to click the "Read On" button so that I can see the entire article.
@@ -26,12 +24,19 @@
 
 # Class 3: Mobile-First / Responsive Design and SMACSS
 
-## User Stories
-
 1. ✅As a visitor, I want the images to be responsive, so that content stays properly proportioned.
 - ✅As a visitor, I want the viewport properly sized, so that content fits all the size I have available.
 - As a visitor, I want the primary nav to be responsive, so that I can get around using any device.
 
 # Class 4: Templates and Typography
 
-1. As a developer, I want to use Handlebars for my project template, so that I can include new projects more easily.
+1. ✅As a developer, I want to use Handlebars for my project template, so that I can include new projects more easily.
+- ✅As a developer, I want my CSS styles to follow SMACSS organization, so that I know where to look for creating and editing styles.
+- ✅As a visitor, I want the site to use great typography, so that I have an enjoyable reading experience.
+
+# Class 5: Article Writer
+
+1. As an author, I want a secret URL (new.html) where I can go write articles, so that blog visitors don't think they can create posts.
+- As an author, I want a form fields for all the article properties, so that I can customize each aspect of my article.
+- As an author, I want to write in Markdown, so that I can easily control formatting.
+- As an author, I want an export of the final article, so that I can paste it into blogArticles.js to publish it.
