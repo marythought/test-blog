@@ -8,10 +8,13 @@ function Article(object) {
 }
 
 Article.prototype.toHtml = function() {
-  var $art = $('div.blog-post').clone().first();
+  var $art = $('div.template').clone();
   $art.find('h2').html(this.title);
+  $art.attr('data-category', this.category);
+  $art.attr('data-author', util.hypenate(this.author));
   $art.find('.author-url').html(this.author).attr('href', this.authorUrl);
   $art.find('.article-date').html(this.publishedOn);
   $art.find('.article-body').html(this.body);
+  $art.removeClass('template');
   $art.appendTo('#blogPosts');
 };
