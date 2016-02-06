@@ -1,6 +1,5 @@
 $( document ).ready(function() {
-  blog.render();
-  articleView.truncate();
+  Article.fetchAll();
   blog.showAbout();
   blog.showNew();
   blog.hide();
