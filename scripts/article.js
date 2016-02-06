@@ -11,6 +11,5 @@ function Article(object) {
 
 Article.prototype.toHtml = function() {
   var template = Handlebars.compile($('#article-template').text());
-
   return template(this);
 };
