@@ -3,31 +3,11 @@
 <head>
   <title>Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
-  crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/base.css"/>
-  <link rel="stylesheet" href="styles/style.css"/>
-  <link rel="stylesheet" href="styles/icons.css"/>
-  <link href='https://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="vendor/styles/normalize.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-  <script src="vendor/scripts/jquery-2.2.0.min.js"></script>
-  <script src="scripts/util.js"></script>
-  <script src="scripts/blog.js"></script>
-  <script src="scripts/blogArticles.js"></script>
-  <script src="scripts/article.js"></script>
-  <script src="scripts/articleView.js"></script>
-  <script src="scripts/index.js"></script>
-
   <script id="article-template" type="text/x-handlebars-template">
     <div class="blog-post clearfix template" data-author="{{authorStub}}" data-category="{{categoryStub}}">
       <h2 class="blog-post-title">{{title}}</h2>
       <p class="blog-post-meta">By <a href="{{authorUrl}}" class=author-url>{{author}}</a> published on <span class="article-date">{{publishedOn}}</span>. Category: {{category}}</p>
       <div class="article-body"> {{{body}}}
-        <a href="#" class="continue btn btn-default">Read on &rarr;</a>
       </div>
     </div>
   </script>
@@ -40,6 +20,7 @@
         <ul>
           <li id="homeTab" class="tab blog-nav-item active" <a href="#">Home</a></li>
           <li id="aboutTab" class="tab blog-nav-item" <a href="#">About</a></li>
+          <li id="newTab" class="tab blog-nav-item" <a href="#">New</a></li>
         </ul>
       </nav>
     </div>
@@ -59,6 +40,43 @@
       <div class="col-sm-8 blog-main" id="about">
         <h2>About Mary</h2>
         <p>Mary is a TA for Code Fellows 301 January class. She likes to put her money where her mouth is.</p>
+      </div>
+
+      <div class="col-sm-8 blog-main" id="newArticle">
+        <h2>Write New Article</h2>
+        <div class="clearfix">
+          <section id="write" class="tab-content">
+            <!-- DONE: Set up a form to accept user input for a new blog article: -->
+            <form action="#" id="new-form">
+              <label>Title:
+                <input type="text" id="article-title" placeholder="Article title" required>
+              </label><br>
+              Content:<br>
+              <textarea id="article-body" rows="8" cols="40" required></textarea><br>
+              <label> Author:
+                <input type="text" id="article-author" placeholder="Author Name" required>
+              </label><br>
+              <label> Author URL:
+                <input type="text" id="article-author-url" placeholder="Author's URL" required>
+              </label><br>
+              <label> Category:
+                <input type="text" id="article-category" placeholder="Category" required>
+              </label><br>
+              <label> Published?
+                <input type="checkbox" id="article-published">
+              </label><br>
+            </form>
+          </section>
+          <section id="articlePreview" class="tab-content">
+          Preview:
+          </section>
+          <section id="articleExport">
+            <label id="export-field" for="article-json" class="pull-right">
+              <input type="text" readonly id="article-json">
+            <br>When finalized, copy the above JSON, and paste into blogArticles.js
+            </label>
+          </section>
+        </div>
       </div>
 
       <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
@@ -98,7 +116,25 @@
   </p>
   </footer>
 
-
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/base.css"/>
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/icons.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script src="vendor/scripts/jquery-2.2.0.min.js"></script>
+  <script src="vendor/scripts/marked.js"></script>
+  <script src="scripts/util.js"></script>
+  <script src="scripts/blog.js"></script>
+  <script src="scripts/blogArticles.js"></script>
+  <script src="scripts/article.js"></script>
+  <script src="scripts/articleView.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,6 @@
 blog.rawData = [
+  {"title":"Testing","category":"","categoryStub":"","author":"","authorStub":"","authorUrl":"","publishedOn":null,"body":"<h2 id=\"hello\">Hello</h2>\n<p>This should not show up!!! This is a paragraph. This is a list:</p>\n<ol>\n<li>cats</li>\n<li>birds</li>\n<li>bees\n<code>var mary = &quot;mary&quot;</code></li>\n</ol>\n<p>that&#39;s some code...</p>\n"},
+  {"title":"Testing 4","category":"testing","categoryStub":"testing","author":"Mary","authorStub":"Mary","authorUrl":"http://www.marydickson.com","publishedOn":"2016-02-05","body":"<h2 id=\"now-with-markdown\">Now with markdown</h2>\n<ul>\n<li>list 1</li>\n<li>list 2</li>\n<li>list 3</li>\n</ul>\n<p><code>var mary = new Coder()</code></p>\n"},
   {
     title:       'Bacon Ipsum',
     category:    'food',

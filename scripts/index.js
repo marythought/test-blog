@@ -1,9 +1,9 @@
 $( document ).ready(function() {
   blog.render();
-  // $('.blog-post:first-child').hide();
   articleView.truncate();
-  blog.hideAbout();
   blog.showAbout();
+  blog.showNew();
+  blog.hide();
   articleView.showArticles();
-  // $('div.template').remove();
+  articleView.initNewArticlePage();
 });
