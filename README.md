@@ -2,6 +2,7 @@
 - make navbar Hamburger
 - Make sure you aren't showing articles that are unpublished ("draft").
 - Add linkedin icons
+- only truncate articles longer than 1 paragraph
 
 ## User Stories and Goals:
 
@@ -36,7 +37,9 @@
 
 # Class 5: Article Writer
 
-1. As an author, I want a secret URL (new.html) where I can go write articles, so that blog visitors don't think they can create posts.
-- As an author, I want a form fields for all the article properties, so that I can customize each aspect of my article.
-- As an author, I want to write in Markdown, so that I can easily control formatting.
-- As an author, I want an export of the final article, so that I can paste it into blogArticles.js to publish it.
+1. ✅As an author, I want a URL where I can go write articles
+- ✅As an author, I want a form fields for all the article properties, so that I can customize each aspect of my article.
+- ✅As an author, I want to write in Markdown, so that I can easily control formatting.
+- ✅As an author, I want an export of the final article, so that I can paste it into blogArticles.js to publish it.
+- ✅As an author, I want a live preview of how my post looks, so that I know if I screw up the markdown.
+- ✅As an author, I want code samples to have syntax highlighting, so that my readers see code as it should appear.

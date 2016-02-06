@@ -8,6 +8,8 @@ articleView.resetArticles = function(){
 
 articleView.truncate = function() {
   $('div.article-body p:not(:first-child)').hide();
+  var readMore = '<a href="#" class="continue btn btn-default">Read on &rarr;</a>';
+  $('div.article-body').append(readMore);
   $('div.article-body').on('click', '.continue', (function(e) {
     event.preventDefault();
     $(this).siblings().show();
@@ -17,10 +19,11 @@ articleView.truncate = function() {
 
 articleView.showArticles = function(){
   $('#homeTab').on('click', function() {
-    $('#articlesTab').removeClass('active');
+    $('#newTab').removeClass('active');
     $('#aboutTab').removeClass('active');
     $(this).addClass('active');
     $('#about').hide();
+    $('#newArticle').hide();
     $('#blogPosts').show();
     $('#article-sort').show();
     articleView.resetArticles();
@@ -62,4 +65,35 @@ articleView.handleFilters = function() {
     }
     $('#authorFilter').val('');
   });
+};
+
+articleView.initNewArticlePage = function() {
+  $('#export-field').hide();
+  $('#article-json').on('focus', function(){
+    this.select();
+  });
+  $('#new-form').on('change', 'input, textarea', articleView.create);
+};
+
+articleView.create = function() {
+  var article;
+  $('#articlePreview').empty();
+
+  article = new Article({
+    title: $('#article-title').val(),
+    author: $('#article-author').val(),
+    authorUrl: $('#article-author-url').val(),
+    category: $('#article-category').val(),
+    body: marked($('#article-body').val()),
+    publishedOn: $('#article-published:checked').length ? util.parseDate() : null
+  });
+
+  $('#articlePreview').append(article.toHtml());
+
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+  $('#export-field').show();
+  $('#article-json').val(JSON.stringify(article) + ',');
 };
