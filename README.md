@@ -1,6 +1,5 @@
 # TODOs
 - make navbar Hamburger
-- Make sure you aren't showing articles that are unpublished ("draft").
 - Add linkedin icons
 - only truncate articles longer than 1 paragraph
 
@@ -43,3 +42,8 @@
 - ✅As an author, I want an export of the final article, so that I can paste it into blogArticles.js to publish it.
 - ✅As an author, I want a live preview of how my post looks, so that I know if I screw up the markdown.
 - ✅As an author, I want code samples to have syntax highlighting, so that my readers see code as it should appear.
+
+# Class 6: AJAX and JSON
+1. ✅As a developer, I want to store my project data in a .json file, so that I can keep it organized.
+- ✅As a developer, I want to retrieve that source data file asynchronously, so that my app logic gets the data just when I need it.
+- ✅As a reader, I only want to have to fetch data when it's updated (and keep it cached locally), so that I don't make unneeded AJAX calls.
