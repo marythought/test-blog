@@ -11,6 +11,11 @@
       </div>
     </div>
   </script>
+  <script id="author-template" type="text/x-handlebars-template">
+    <ul>
+      <li><strong>{{name}}</strong>: {{numWords}} words written</li>
+    </ul>
+  </script>
 </head>
 
 <body>
@@ -21,6 +26,7 @@
           <li id="homeTab" class="tab blog-nav-item active" <a href="#">Home</a></li>
           <li id="aboutTab" class="tab blog-nav-item" <a href="#">About</a></li>
           <li id="newTab" class="tab blog-nav-item" <a href="#">New</a></li>
+          <li id="statsTab" class="tab blog-nav-item" <a href="#">Stats</a></li>
         </ul>
       </nav>
     </div>
@@ -69,7 +75,7 @@
           </section>
           <section id="articlePreview" class="tab-content">
           Preview:
-          </section>
+        </section>
           <section id="articleExport">
             <label id="export-field" for="article-json" class="pull-right">
               <input type="text" readonly id="article-json">
@@ -77,6 +83,19 @@
             </label>
           </section>
         </div>
+      </div>
+
+      <div class="col-sm-8 blog-main clearfix" id="stats">
+        <h2>Page Stats</h1>
+        <section id="blog-stats">
+          <dt>Total articles:</dt> <dd class="articles"></dd>
+          <dt>Total words:</dt> <dd class="words"></dd>
+          <br>
+          <h2>Author Stats</h2>
+          <p><em>Details on who is writing, and how much writing they are doing...</em></p>
+          <ul id="author-stats">
+          </ul>
+        </section>
       </div>
 
       <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
@@ -131,7 +150,6 @@
   <script src="vendor/scripts/marked.js"></script>
   <script src="scripts/util.js"></script>
   <script src="scripts/blog.js"></script>
-  <script src="scripts/blogArticles.js"></script>
   <script src="scripts/article.js"></script>
   <script src="scripts/articleView.js"></script>
   <script src="scripts/index.js"></script>
